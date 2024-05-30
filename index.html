@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Responsivo</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/media query.png" type="Media Queres">
+    <link rel="stylesheet" href="estilos/media-query.css">
+
+    
+        
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Media Query-Meu Site</h1>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>O que são Media Queries?</h2>
+    <p>
+        Media query, nada mais é do que uma estrutura do CSS que
+        permite aplicar estilizações especificas para uma página web
+        de acordo com certas condições,
+        fazendo assim com esta página possa se adequar ao
+        layout de tela em diferentes tamanhos e tipos de mídia.
+    </p>
+
+        <h2>Tipos de media ou Media types</h2>
+
+    <p>
+        Sua funcionalidade serve para direcionar
+        determinado CSS para um meio específico de dispositivo,
+        ou seja, definem para qual tipo de media, o CSS que você
+        aplica em seu site será direcionado.
+    </p>
+
+    <strong>Existem vários media types, aqui, citarei alguns:</strong>
+
+    <ul>
+        <li><strong>print</strong>: Para impressoras</li>
+        <li><strong>screen</strong>: Para monitores ou outros dispositivos como computadores, tablets e smartphones com telas coloridas e com resolução adequada</li>
+        <li><strong>handheld</strong>: Para dispositivos de mão</li>
+        <li><strong>all</strong>: Para todos os tipos de mídia</li>
+    </ul>
+
+
+    <h2>Media features no media query</h2>
+        <p>
+            Um media feature é a largura da janela do documento,
+            normalmente usado para atribuir uma condição que vai testar se o que foi definido
+            é verdadeiro ou falso, ou seja, são elementos do CSS que atribuídos a estrutura do
+            media para exibir
+            quando a estilização sofrerá modificação.
+        </p>
+
+        <strong>
+            De forma simplificada, podemos destacar alguns:
+        </strong>
+
+        <ul>
+            <li>orientation</li>
+            <li>width</li>
+            <li>height</li>
+        </ul>
+          
+        <p>
+            O orientation possui dois possíveis
+            valores, os quais são portrait e landscape,
+            onde o primeiro define a orientação em
+            retrato, ou seja, se a altura é maior ou igual à largura e o segundo,
+            orientação paisagem seguindo o mesmo resultado citado antes.
+        </p>
+
+        <p>
+            Já o width define a largura do elemento na horizontal.
+         </p>
+
+        <p>
+            E por último o height que define a altura do elemento na vertical.
+        </p>
+        <p>
+            Muitos media features podem ter 
+            prefixado <strong>min-</strong> ou <strong>max-</strong>, ou seja, 
+            servem para definir a largura mínima ou 
+            máxima de uma condição, 
+            assim definindo se 
+            nossas estilizações serão aplicadas conforme o tamanho da tela. 
+        </p>
+            <p>
+                Vamos ver alguns exemplos:
+            </p>
+
+                <p class="telas"><strong>Pequenas telas</strong>: até 600px</p><br>
+                <p class="telas"><strong>Celular</strong>: de 600px até 768px</p><br>
+                <p class="telas"><strong>Tablet</strong>: 768px até 992px</p><br>
+                <p class="telas"><strong>Notebook</strong>: 992px até 1200px</p><br>
+                <p class="telas"><strong>Grande-Telas</strong>: acima de 1200px</p> 
+            
+        </article>
+    </main>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+            itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+
+        function clickMenu() {
+             if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+             } else {
+                itens.style.display = 'block'
+             }
+
+            } 
+    </script>
+</body>
+</html>
